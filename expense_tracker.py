@@ -12,7 +12,7 @@ if "expenses" not in st.session_state:
 
 with st.form("add_expense_form"):
     expense_date = st.date_input("Date", date.today())
-    category = st.selectbox("Category", ["Food", "Fuel", "Rent", "Utilities", "Entertainment", "Others"])
+    category = st.selectbox("Category", ["Food", "Fuel", "Transport", "Entertainment", "Bills", "Other"])
     amount = st.number_input("Amount (AUD)", min_value=0.0, format="%.2f")
     note = st.text_input("Notes (optional)")
     submitted = st.form_submit_button("Add Expense")
